@@ -9,7 +9,7 @@ Your job is to build out the data models to power the API endpoints for the Fyyu
 
 ## Overview
 
-This app is nearly complete. It is only missing one thing… real data! While the views and controllers are defined in this application, it is missing models and model interactions to be able to store retrieve, and update data from a database. By the end of this project, you should have a fully functioning site that is at least capable of doing the following, if not more, using a PostgreSQL database:
+This app was nearly complete. It was only missing one thing… real data! While the views and controllers were defined in this application, it was missing models and model interactions to be able to store retrieve, and update data from a database. At the end of this project, I created a fully functioning site that is at least capable of doing the following, using a PostgreSQL database:
 
 * creating new venues, artists, and creating new shows.
 * searching for venues and artists.
@@ -20,7 +20,7 @@ We want Fyyur to be the next new platform that artists and musical venues can us
 ## Tech Stack (Dependencies)
 
 ### 1. Backend Dependencies
-Our tech stack will include the following:
+Our tech stack include the following:
  * **virtualenv** as a tool to create isolated Python environments
  * **SQLAlchemy ORM** to be our ORM library of choice
  * **PostgreSQL** as our database of choice
@@ -79,15 +79,6 @@ Overall:
 * Web forms for creating data are located in `form.py`
 
 
-Highlight folders:
-* `templates/pages` -- (Already complete.) Defines the pages that are rendered to the site. These templates render views based on data passed into the template’s view, in the controllers defined in `app.py`. These pages successfully represent the data to the user, and are already defined for you.
-* `templates/layouts` -- (Already complete.) Defines the layout that a page can be contained in to define footer and header code for a given page.
-* `templates/forms` -- (Already complete.) Defines the forms used to create new artists, shows, and venues.
-* `app.py` -- (Missing functionality.) Defines routes that match the user’s URL, and controllers which handle data and renders views to the user. This is the main file you will be working on to connect to and manipulate the database and render views with data to the user, based on the URL.
-* Models in `app.py` -- (Missing functionality.) Defines the data models that set up the database tables.
-* `config.py` -- (Missing functionality.) Stores configuration variables and instructions, separate from the main application code. This is where you will need to connect to the database.
-
-
 Instructions
 -----
 
@@ -102,8 +93,10 @@ Instructions
     * Implement search, powering the `/search` endpoints that serve the application's search functionalities.
     * Serve venue and artist detail pages, powering the `<venue|artist>/<id>` endpoints that power the detail pages.
 
+I COMPLETED ALL THE INSTRUCTIONS GIVEN TO ME ABOVE
+
 #### Data Handling with `Flask-WTF` Forms
-The starter codes use an interactive form builder library called [Flask-WTF](https://flask-wtf.readthedocs.io/). This library provides useful functionality, such as form validation and error handling. You can peruse the Show, Venue, and Artist form builders in `forms.py` file. The WTForms are instantiated in the `app.py` file. For example, in the `create_shows()` function, the Show form is instantiated from the command: `form = ShowForm()`. To manage the request from Flask-WTF form, each field from the form has a `data` attribute containing the value from user input. For example, to handle the `venue_id` data from the Venue form, you can use: `show = Show(venue_id=form.venue_id.data)`, instead of using `request.form['venue_id']`.
+The starter codes used an interactive form builder library called [Flask-WTF](https://flask-wtf.readthedocs.io/). This library provides useful functionality, such as form validation and error handling. I peruse the Show, Venue, and Artist form builders in `forms.py` file. The WTForms are instantiated in the `app.py` file. For example, in the `create_shows()` function, the Show form is instantiated from the command: `form = ShowForm()`. To manage the request from Flask-WTF form, each field from the form has a `data` attribute containing the value from user input. For example, to handle the `venue_id` data from the Venue form, you can use: `show = Show(venue_id=form.venue_id.data)`, instead of using `request.form['venue_id']`.
 
 Acceptance Criteria
 -----
@@ -124,19 +117,10 @@ Acceptance Criteria
   * The relationship between the models should be accurately configured, and referential integrity amongst the models should be preserved.
   * `flask db migrate` should work, and populate my local postgres database with properly configured tables for this application's objects, including proper columns, column data types, constraints, defaults, and relationships that completely satisfy the needs of this application. The proper type of relationship between venues, artists, and shows should be configured.
 
-##### Stand Out
-
-Looking to go above and beyond? This is the right section for you! Here are some challenges to make your submission stand out:
-
-*  Implement artist availability. An artist can list available times that they can be booked. Restrict venues from being able to create shows with artists during a show time that is outside of their availability.
-* Show Recent Listed Artists and Recently Listed Venues on the homepage, returning results for Artists and Venues sorting by newly created. Limit to the 10 most recently listed items.
-* Implement Search Artists by City and State, and Search Venues by City and State. Searching by "San Francisco, CA" should return all artists or venues in San Francisco, CA.
-
-Best of luck in your final project! Fyyur depends on you!
-
+I SATISFIED ALL THE CRITERIA REQUIRED AND PASSED THE PROJECT
 
 ## Development Setup
-1. **Download the project starter code locally**
+1. **Download the project code locally**
 ```
 git clone https://github.com/udacity/FSND.git
 cd FSND/projects/01_fyyur/starter_code 
